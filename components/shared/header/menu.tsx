@@ -62,7 +62,7 @@ const Menu = () => {
                   </Link>
                 </Button>
 
-                <ModeToggle />
+                <ModeToggle variant={"outline"} />
               </div>
             </SheetDescription>
           </SheetContent>

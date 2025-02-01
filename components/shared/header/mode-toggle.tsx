@@ -13,14 +13,18 @@ import { Sun, Moon, SunMoon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { DropdownMenuContent } from "@radix-ui/react-dropdown-menu";
 
-const ModeToggle = () => {
+const ModeToggle = ({
+  variant = "ghost",
+}: {
+  variant?: "ghost" | "outline" | "default";
+}) => {
   const { theme, setTheme } = useTheme();
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
-          variant="ghost"
+          variant={variant}
           size="icon"
           className="focus-visible:ring-offset-0 focus-visible:ring-0"
         >
