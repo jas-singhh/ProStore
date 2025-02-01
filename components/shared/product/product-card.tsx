@@ -2,6 +2,7 @@ import React from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
+import ProductPrice from "./product-price";
 
 const ProductCard = ({ product }: { product: any }) => {
   return (
@@ -30,7 +31,8 @@ const ProductCard = ({ product }: { product: any }) => {
             <p className="text-md">{product.rating} Stars</p>
 
             {product.stock > 0 ? (
-              <p className="text-lg">£{product.price}</p>
+              // <p className="text-lg">£{product.price}</p>
+              <ProductPrice productPrice={product.price} />
             ) : (
               <p className="text-red-800 font-extralight">Out of stock</p>
             )}
